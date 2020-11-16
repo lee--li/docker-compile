@@ -16,6 +16,8 @@ COPY --from=builder /usr/src/app/node_modules ./node_modules
 
 COPY . .
 
-EXPOSE 7000
+EXPOSE 8080
 
-ENTRYPOINT [ "node", "severnode.js" ]
+#ENV PORT 8081
+
+ENTRYPOINT [ "node", "servernode.js" ]
